@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>User Profile </title>
+    <style>
+        body {
+			text-align: center;
+		}
+
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{values["Name"]}}</h1>
+    <table border=1>
+        <thread>
+            <td>Name</td>
+            <td>Preferences</td>
+            <td>Contact</td>
+        </thread>
+            <tr>
+                <td>{{values["Name"]}}</td>
+                <td>{{values["Preferences"]}}</td>
+                <td>{{values["Contact"]}}</td>
+            </tr>
+    </table>
+    <h2>Matches</h2>
+    <table border=1>
+        <thread>
+            <td>Matcher</td>
+            <td>Matcher Contact</td>
+            <td>Matchee</td>
+            <td>Matchee Contact</td>
+            <td>Movie</td>
+        </thread>
+        {% for match in match %}
+        <tr>
+            <td>{{match["UserOne"]}}</td>
+            <td>{{match["u1Contact"]}}</td>
+            <td>{{match["UserTwo"]}}</td>
+            <td>{{match["u2Contact"]}}</td>
+            <td>{{match["Movie"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+    <a href="/NewMovie?name={{name}}&Idnum={{Idnum}}">Find movie watchers</a>
+    <a href = "/">Log out</a>
+
+
+    <a href = "/allUsers">Go to all Users page</a>
+
+</body>
+</html>

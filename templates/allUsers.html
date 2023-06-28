@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>All User Profiles </title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        table{
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<table border=1>
+        <thread>
+            <td>Name</td>
+            <td>UserID</td>
+            <td>Contact</td>
+            <td>Role</td>
+        </thread>
+        {% for all in all %}
+        <tr>
+            <td>{{all["Name"]}}</td>
+            <td>{{all["UserID"]}}</td>
+            <td>{{all["Contact"]}}</td>
+            <td>{{all["Role"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/Profile">Return to Menu</a>
+</body>
+</html>

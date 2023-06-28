@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <h3>Create a profile</h3>
+    <style>
+      body{
+          text-align: center;
+      }
+  </style>
+</head>
+   <body>
+      <form action = "{{ url_for('adduser') }}" method = "POST">
+         Your name:
+         <input type = "text" name = "Name" /></br>
+          <h3>Movie Information</h3>
+         Your password:
+         <input type ="text" name = "Password" /><br>
+
+          <h3>Personal information (this will be available to people you have matched with)</h3>
+          Movies you like:
+         <textarea name = "Preferences" ></textarea><br>
+
+          How to contact:
+         <input type = "text" name = "Contact" /><br>
+
+         <input type = "submit" value = "submit" /><br>
+      </form>
+
+   </body>
+</html>
